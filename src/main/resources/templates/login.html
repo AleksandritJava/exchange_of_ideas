@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+    <link rel="stylesheet" th:href="@{/css/Login.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrap_item" id="item_1">
+        <div class="wrap_text"><h1 class="text">Welcome Back!</h1></div>
+    </div>
+    <div class="wrap_item" id="item_2">
+        <form name="LoginForm" th:action="@{/perform-login}" method="post">
+            <div class="form1">
+                <h1>Login</h1>
+                <h5>Welcome back! Please log in to your account</h5>
+
+
+
+                <div class="email_wrap">
+                    <label for="user" class="name">User Name</label>
+                    <input type="text" id="user" name="user">
+                </div>
+
+
+
+                <div class="pass_wrap">
+                    <label for="pass" class="pass">Password</label>
+                    <input type="password" id="pass" name="pass">
+                </div>
+
+                <div class="hz_chto_eto">
+
+                    <div class="remember"><input type="checkbox" class="checkbox" id="check"><label for="check"></label>
+                        <p>Remember Me</p></div>
+
+                    <a href="#" class="forget">Forget Password?</a>
+
+                </div>
+                <button type="submit" class="btn" value="Login" >Log in</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
